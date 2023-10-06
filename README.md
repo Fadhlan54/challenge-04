@@ -76,7 +76,7 @@ Jalankan server
      ```
    - Controller: `adminController.removeCar`
 
-5. **POST /api/action**
+5. **POST /dashboard/action**
 
    - Deskripsi: Membuat mobil baru.
    - Form Data:
