@@ -5,6 +5,7 @@ Pada challenge kali ini kita membuat dashboard admin untuk pengelolaan rental mo
 ## Database Diagram
 
 Berikut ini adalah database diagram:
+
 ![Alt text](car-db-diagram.png)
 
 ## Menjalankan secara lokal
