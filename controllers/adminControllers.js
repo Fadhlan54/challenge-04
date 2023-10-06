@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-const getAllCars = async (req, res) => {
+const homePage = async (req, res) => {
   try {
     const { name, category } = req.query;
     console.log(name);
@@ -71,12 +71,11 @@ const createCar = async (req, res) => {
 const editCar = async (req, res) => {
   try {
     const id = req.params.id;
-
     const updatedData = {
       ...req.body,
-      image: req.file.filename,
       dateUpdated: req.date,
     };
+
     const carData = await Car.findById(id);
 
     if (!carData) {
@@ -87,6 +86,7 @@ const editCar = async (req, res) => {
     }
 
     if (req.file) {
+      updatedData.image = req.file.filename;
       const oldFileName = carData.image;
       const oldFilePath = path.join(
         `${__dirname}/../public/car_images`,
@@ -179,7 +179,7 @@ const editPage = async (req, res) => {
 };
 
 module.exports = {
-  getAllCars,
+  homePage,
   createCar,
   createPage,
   editCar,

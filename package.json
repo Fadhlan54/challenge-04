@@ -1,13 +1,14 @@
 {
   "name": "challenge-04-template",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Website adalah dashboard admin untuk pengelolaan rental mobil",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server"
   },
   "keywords": [],
-  "author": "",
+  "author": "Fadhlan",
   "license": "ISC",
   "dependencies": {
     "connect-flash": "^0.1.1",
@@ -19,5 +20,8 @@
     "mongoose": "^7.5.3",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
