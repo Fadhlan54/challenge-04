@@ -8,7 +8,7 @@ Pada challenge kali ini kita membuat dashboard admin untuk pengelolaan rental mo
 
 ## Menjalankan secara lokal
 
-Clone the project
+Clone projek dari github
 
 ```bash
   git clone https://github.com/Fadhlan54/challenge-04
@@ -65,18 +65,18 @@ Jalankan server
      ```
    - Controller: `adminController.editPage`
 
-4. **GET /dashboard/action/delete/:id**
+4. **GET /car/delete/:id**
 
    - Deskripsi: Menghapus mobil dengan ID tertentu.
    - Parameter:
      - `id` (String) - ID mobil yang akan dihapus.
    - Contoh request:
      ```
-     GET /dashboard/action/delete/651ef3f0f50cab5ad1e0b772
+     GET /car/delete/651ef3f0f50cab5ad1e0b772
      ```
    - Controller: `adminController.removeCar`
 
-5. **POST /dashboard/action**
+5. **POST /car/create**
 
    - Deskripsi: Membuat mobil baru.
    - Form Data:
@@ -86,7 +86,7 @@ Jalankan server
      - `image` (File) - Gambar mobil yang akan diunggah. (required)
    - Contoh Request:
      ```
-     POST /dashboard/action/create
+     POST /car/create
      Content-Type: multipart/form-data
      Body: (Form Data)
        - name: Avanza
@@ -96,7 +96,7 @@ Jalankan server
      ```
    - Controller: `adminController.upload.single("image")` (Middleware untuk mengunggah gambar), `adminController.createCar`
 
-6. **POST /dashboard/action/edit/:id**
+6. **POST /car/edit/:id**
    - Deskripsi: Mengedit mobil dengan ID tertentu.
    - Parameter:
      - `id` (String) - ID mobil yang akan diedit.
@@ -107,7 +107,7 @@ Jalankan server
      - `image` (File) - Gambar mobil yang akan diunggah (opsional).
    - Contoh request:
      ```
-     POST /dashboard/action/edit/651ef3f0f50cab5ad1e0b772
+     POST /car/edit/651ef3f0f50cab5ad1e0b772
      Content-Type: multipart/form-data
      Body: (Form Data)
        - name: Avanza

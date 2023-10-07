@@ -126,7 +126,7 @@
                 <div class="card px-2 py-4">
                   <img
                     height="222px"
-                    src="/car_images/<%= car.image %>"
+                    src="<%= car.imageUrl %>"
                     class="card-img-top text-center"
                     style="aspect-ratio: 2/1; object-fit: contain"
                   />
@@ -226,7 +226,7 @@
   modals.forEach((modal) => {
       modal.addEventListener('click', e => {
           const id = modal.getAttribute('data-id')
-          trigger.href = `/dashboard/action/delete/${id}`
+          trigger.href = `/car/delete/${id}`
       })
   })
 

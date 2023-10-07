@@ -59,7 +59,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/dashboard", adminRouter);
+app.use("/", adminRouter);
 
 app.use((req, res) => {
   res.status(404).send("404 not found");
