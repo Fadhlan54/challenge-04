@@ -6,27 +6,29 @@ Pada challenge kali ini kita membuat dashboard admin untuk pengelolaan rental mo
 
 ![Alt text](car-db-diagram.png)
 
-## Menjalankan secara lokal
+## Cara Menjalankan secara lokal
 
-Clone projek dari github
+- Clone projek dari github
 
 ```bash
   git clone https://github.com/Fadhlan54/challenge-04
 ```
 
-Buka direktori project
+- Buka direktori project
 
 ```bash
   cd challenge-04
 ```
 
-Install dependencies
+- Install dependencies
 
 ```bash
   npm install
 ```
 
-Jalankan server
+- Dapatkan file .env
+
+- Jalankan server
 
 ```bash
   npm run start
